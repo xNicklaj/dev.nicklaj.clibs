@@ -1,0 +1,16 @@
+{
+    "name": "dev.nicklaj.clibs",
+    "rootNamespace": "",
+    "references": [
+        "GUID:de13f8b1675b449e6a6af1cc0f7842ec"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
