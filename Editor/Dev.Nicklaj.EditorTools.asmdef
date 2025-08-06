@@ -1,7 +1,7 @@
 {
     "name": "dev.nicklaj.clibs.editor",
     "rootNamespace": "",
-    "references": [],
+    "references": ["GUID:5efd74a543020d84bacab72a35582b12"],
     "includePlatforms": [
         "Editor"
     ],
