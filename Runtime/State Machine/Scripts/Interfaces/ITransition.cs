@@ -1,5 +1,8 @@
-﻿public interface ITransition
+﻿namespace dev.nicklaj.clibs.StateMachine
 {
-    public IState To { get; }
-    public IPredicate Condition { get; }
+    public interface ITransition
+    {
+        public IState To { get; }
+        public IPredicate Condition { get; }
+    }
 }

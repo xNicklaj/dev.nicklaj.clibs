@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-public class StateMachine
+namespace dev.nicklaj.clibs.StateMachine
+{
+    public class StateMachine
 {
     private StateNode current;
     private Dictionary<Type, StateNode> nodes = new();
@@ -114,4 +116,5 @@ public class StateMachine
     }
 
     public StateNode GetCurrentState() => current;
+}
 }

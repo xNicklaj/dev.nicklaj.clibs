@@ -1,4 +1,8 @@
-﻿public interface IPredicate
+﻿namespace dev.nicklaj.clibs.StateMachine
 {
-    public bool Evaluate();
+    public interface IPredicate
+    {
+        public bool Evaluate();
+    }
+
 }

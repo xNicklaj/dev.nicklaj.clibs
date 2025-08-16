@@ -1,12 +1,15 @@
 ﻿
-public class Transition : ITransition
+namespace dev.nicklaj.clibs.StateMachine
 {
-    public IState To { get; }
-    public IPredicate Condition { get; }
-
-    public Transition(IState to, IPredicate condition)
+    public class Transition : ITransition
     {
-        To = to;
-        Condition = condition;
+        public IState To { get; }
+        public IPredicate Condition { get; }
+
+        public Transition(IState to, IPredicate condition)
+        {
+            To = to;
+            Condition = condition;
+        }
     }
 }
