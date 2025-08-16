@@ -21,7 +21,7 @@ namespace dev.nicklaj.clibs.deblog
             if (Categories.TryGetValue(category, out var cat)) 
                 return cat.Color;
             
-            return Color.whiteSmoke;
+            return Color.white;
         }
     }
 

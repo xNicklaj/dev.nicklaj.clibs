@@ -18,7 +18,7 @@ namespace dev.nicklaj.clibs.deblog
 
         private static Color GetColor(string category)
         {
-            var color = Color.whiteSmoke;
+            var color = Color.white;
             if(Categories != null) 
                 color = Categories.GetColor(category);
             return color;
