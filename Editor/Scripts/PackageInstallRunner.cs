@@ -39,7 +39,7 @@ namespace Dev.Nicklaj.EditorTools
                 AssetDatabase.SaveAssets();
                 AssetDatabase.Refresh();
                 
-                Deblog.Log($"Created Log Categories asset at {AssetPath}.", "Nicklibs", Color.aquamarine);
+                Deblog.Log($"Created Log Categories asset at {AssetPath}.", "Nicklibs", Color.cyan);
             }
         }
     }
