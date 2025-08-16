@@ -2,7 +2,8 @@
     "name": "dev.nicklaj.clibs",
     "rootNamespace": "",
     "references": [
-        "GUID:de13f8b1675b449e6a6af1cc0f7842ec"
+        "GUID:de13f8b1675b449e6a6af1cc0f7842ec",
+        "GUID:79ad2193969254fbd829729521e3eee3"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
