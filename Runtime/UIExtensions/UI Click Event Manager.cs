@@ -1,4 +1,5 @@
     using System;
+    using dev.nicklaj.clibs.deblog;
     using UnityEngine;
     using UnityEngine.Events;
     using UnityEngine.UIElements;
@@ -9,6 +10,9 @@
         [RequireComponent(typeof(UIDocument))]
         public class UIClickEventManager : MonoBehaviour
         {
+            private static readonly string LOG_CATEGORY = "UI Extensions";
+            private static readonly Color LOG_COLOR = Color.cyan;
+            
             public ButtonClickEvent[] Buttons;
             public ToggleClickEvent[] Toggles;
             
@@ -44,7 +48,11 @@
                 foreach (var btn in Buttons)
                 {
                     Button button = _root.Query<Button>(btn.Query);
-                    if (button == null) continue;
+                    if (button == null)
+                    {
+                        Deblog.LogWarning($"Couldn't find any button queried as {btn.Query}. Skipping injection.", LOG_CATEGORY, LOG_COLOR);
+                        continue;
+                    }
 
                     _cachedActions[i] = () => btn.InvokeEvent();
                     button.clicked += _cachedActions[i];
@@ -56,7 +64,11 @@
                 foreach (var tgl in Toggles)
                 {
                     Toggle toggle = _root.Query<Toggle>(tgl.Query);
-                    if (toggle == null) continue;
+                    if (toggle == null) 
+                    {
+                        Deblog.LogWarning($"Couldn't find any toggle queried as {tgl.Query}. Skipping injection.", LOG_CATEGORY, LOG_COLOR);
+                        continue;
+                    }
                     
                     EventCallback<ChangeEvent<bool>> callback = evt => tgl.InvokeEvent(evt.newValue);
                     _cachedCallbacks[i] = callback;
